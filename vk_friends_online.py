@@ -21,7 +21,7 @@ def get_online_friends(login, password):
         app_id=APP_ID,
         user_login=login,
         user_password=password,
-        scope='friends',   # <===== I don't get it
+        scope='friends',
     )
     api = vk.API(session)
     friends_ids = api.friends.getOnline()
@@ -30,10 +30,11 @@ def get_online_friends(login, password):
 
 
 def output_friends_to_console(friends_online_list):
-    for friend in friends_online_list:
-        friend_first_name = friend.get('first_name')
-        friend_last_name = friend.get('last_name')
-        print(friend_first_name, friend_last_name)
+    if len(friends_online_list):
+        for friend in friends_online_list:
+            print(friend['first_name'], friend['last_name'])
+    else:
+        print('There are no friends online')
 
 
 if __name__ == '__main__':
