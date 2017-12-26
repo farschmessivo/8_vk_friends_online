@@ -5,14 +5,12 @@ APP_ID = 6307155
 
 
 def get_user_login():
-    print('Please enter your login: ')
-    login = input()
+    login = input('Please enter your login: ')
     return login
 
 
 def get_user_password():
-    print('Please enter your password: ')
-    password = getpass()
+    password = getpass('Please enter your password: ')
     return password
 
 
@@ -30,8 +28,8 @@ def get_online_friends(login, password):
 
 
 def output_friends_to_console(friends_online_list):
-    print('Friends currently online')
-    if len(friends_online_list):
+    print('Friends currently online:')
+    if friends_online_list:
         for friend in friends_online_list:
             print(friend['first_name'], friend['last_name'])
     else:
