@@ -18,7 +18,7 @@ Example of script launch on Linux, Python 3.5:
 ```bash
 $ python3 vk_friends_online.py
 Please enter your login: 
-user@user.com
+user@astronaut.com
 Please enter your password:
 ********
 Mark Vande Hei
