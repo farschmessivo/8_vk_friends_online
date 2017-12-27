@@ -28,8 +28,8 @@ def get_online_friends(login, password):
 
 
 def output_friends_to_console(friends_online_list):
-    print('Friends currently online:')
     if friends_online_list:
+        print('Friends currently online:')
         for friend in friends_online_list:
             print(friend['first_name'], friend['last_name'])
     else:
